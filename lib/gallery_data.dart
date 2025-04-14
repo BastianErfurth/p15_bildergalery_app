@@ -1,4 +1,4 @@
-List<GalleryItem> galleryData = [
+List<GalleryItem> myGalleryData = [
   GalleryItem(
     imageTitle: 'Nordlichter Finnland',
     imageDate: '26.02.2025',

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:p15_bildergalery_app/main.dart';
 import 'package:p15_bildergalery_app/my_main_screen.dart';
 
 class MainApp extends StatelessWidget {
@@ -7,6 +6,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: MyMainScreen());
+    return const MaterialApp(
+      home: MyMainScreen(),
+    );
   }
 }
