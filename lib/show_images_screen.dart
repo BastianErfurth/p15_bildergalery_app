@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:p15_bildergalery_app/gallery_data.dart';
+import 'package:p15_bildergalery_app/image_detail_screen.dart';
 
 class ShowImagesScreen extends StatelessWidget {
   const ShowImagesScreen({
@@ -20,27 +21,10 @@ class ShowImagesScreen extends StatelessWidget {
                 elevation: 8,
                 child: GestureDetector(
                   onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) {
-                        return AlertDialog(
-                          content: Column(
-                            spacing: 8,
-                            children: [
-                              Expanded(
-                                child: Image.asset(
-                                  myGaleryList.imagePath,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Text(myGaleryList.imageTitle),
-                              Text(myGaleryList.imageDate),
-                              Text(myGaleryList.imageDescription),
-                            ],
-                          ),
-                        );
-                      },
-                    );
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          ImageDetailScreen(galleryItem: myGaleryList),
+                    ));
                   },
                   child: Column(
                     spacing: 16,
