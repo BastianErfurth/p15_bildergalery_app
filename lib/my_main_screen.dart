@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:p15_bildergalery_app/gallery_data.dart';
+import 'package:p15_bildergalery_app/show_about_me_screen.dart';
+import 'package:p15_bildergalery_app/show_images_screen.dart';
 
-class MyMainScreen extends StatelessWidget {
+class MyMainScreen extends StatefulWidget {
   const MyMainScreen({super.key});
+
+  @override
+  State<MyMainScreen> createState() => _MyMainScreenState();
+}
+
+class _MyMainScreenState extends State<MyMainScreen> {
+  int _pageIndex = 0;
+
+  List<Widget> myScreens = [
+    ShowImagesScreen(),
+    ShowAboutMeScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -10,67 +23,18 @@ class MyMainScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("My Gallery"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Expanded(
-          child: ListView.builder(
-            itemCount: myGalleryData.length,
-            itemBuilder: (context, index) {
-              final myGaleryList = myGalleryData[index];
-              return Wrap(
-                children: [
-                  Card(
-                    elevation: 8,
-                    child: GestureDetector(
-                      onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              content: Column(
-                                spacing: 8,
-                                children: [
-                                  Expanded(
-                                      child: Image.asset(
-                                    myGaleryList.imagePath,
-                                    fit: BoxFit.cover,
-                                  )),
-                                  Text(
-                                    myGaleryList.imageTitle,
-                                  ),
-                                  Text(myGaleryList.imageDate),
-                                  Text(myGaleryList.imageDescription),
-                                ],
-                              ),
-                            );
-                          },
-                        );
-                      },
-                      child: Column(
-                        spacing: 16,
-                        children: [
-                          Image.asset(myGaleryList.imagePath),
-                          Text(
-                            myGaleryList.imageTitle,
-                            style: TextStyle(fontSize: 16),
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
-          ),
-        ),
-      ),
-      bottomNavigationBar: NavigationBar(destinations: [
-        NavigationDestination(icon: Icon(Icons.image), label: "Bilder"),
-        NavigationDestination(icon: Icon(Icons.person), label: "Über mich"),
-      ]),
+      body: myScreens[_pageIndex],
+      bottomNavigationBar: NavigationBar(
+          onDestinationSelected: (value) {
+            setState(() {
+              _pageIndex = value;
+            });
+          },
+          selectedIndex: _pageIndex,
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.image), label: "Bilder"),
+            NavigationDestination(icon: Icon(Icons.person), label: "Über mich"),
+          ]),
     );
   }
 }

@@ -14,7 +14,7 @@ List<GalleryItem> myGalleryData = [
     imagePath: 'assets/images/guatemala.jpeg',
   ),
   GalleryItem(
-    imageTitle: 'Napali Coast Hawaii',
+    imageTitle: 'Na Pali Coast Hawaii',
     imageDate: '24.12.2021',
     imageDescription:
         'Hawaii ist ein tropischer Inselstaat im Pazifik, berühmt für seine traumhaften Strände, Vulkane und die beeindruckende Nā Pali Coast mit ihren steilen Klippen und grünen Tälern. Die Inseln bieten eine einzigartige Mischung aus Natur, Kultur und Aloha-Spirit.',
