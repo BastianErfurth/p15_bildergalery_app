@@ -69,6 +69,55 @@ List<GalleryItem> myGalleryData = [
         'Tansania ist ein faszinierendes Land in Ostafrika, bekannt für seine wilde Natur und beeindruckende Tierwelt. Die Serengeti bietet eine der bekanntesten Safarilandschaften, mit atemberaubenden Tierbeobachtungen, besonders während der großen Migration von Gnus und Zebras.',
     imagePath: 'assets/images/tansania.jpeg',
   ),
+  GalleryItem(
+    imageTitle: 'Kroatien Krka Wasserfälle',
+    imageDate: '18.05.2018',
+    imageDescription:
+        'Kroatien beeindruckt mit Küsten, Kultur und Natur. Die Plitvicer Seen und die Krka-Wasserfälle zählen zu den schönsten Nationalparks des Landes – mit türkisfarbenem Wasser, Wasserfällen und malerischen Wanderwegen.',
+    imagePath: 'assets/images/kroatien.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Malaysia Insel Lankawi',
+    imageDate: '08.05.2024',
+    imageDescription:
+        'Malaysia ist ein vielfältiges Land in Südostasien, das mit moderner Architektur, tropischem Regenwald und kulturellem Reichtum begeistert. Ein Highlight ist die Insel Langkawi – bekannt für weiße Sandstrände, dichten Dschungel und entspannte Urlaubsatmosphäre. Ideal für Natur- und Sonnenliebhaber!',
+    imagePath: 'assets/images/malaysia.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Malediven',
+    imageDate: '28.02.2013',
+    imageDescription:
+        'Die Malediven sind ein tropisches Inselparadies im Indischen Ozean, bekannt für türkisblaues Wasser, weiße Sandstrände und luxuriöse Resorts. Besonders magisch sind die Sonnenaufgänge, wenn der Himmel in sanften Rosa- und Orangetönen leuchtet – perfekt für einen friedlichen Start in den Tag.',
+    imagePath: 'assets/images/malediven.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Montenegro',
+    imageDate: '26.09.2023',
+    imageDescription:
+        'Montenegro begeistert mit beeindruckender Natur, charmanten Küstenorten und einer spannenden Mischung aus Balkan- und Mittelmeerkultur. Besonders schön ist Tivat – eine moderne Hafenstadt an der Bucht von Kotor, bekannt für ihre Promenade, Luxusyachten und entspannte Atmosphäre.',
+    imagePath: 'assets/images/montenegro.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Slovenien Bled See',
+    imageDate: '26.09.2023',
+    imageDescription:
+        'Slowenien ist ein grünes, vielfältiges Land im Herzen Europas, das mit Bergen, Wäldern und charmanten Städten überzeugt. Ein besonderes Highlight ist der Bleder See – mit seiner kleinen Insel und der Kirche in der Mitte wirkt er wie aus dem Märchen und ist ein beliebtes Ausflugsziel.',
+    imagePath: 'assets/images/slovenien.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Zakynthos',
+    imageDate: '13.09.2021',
+    imageDescription:
+        'Zakynthos, eine griechische Insel im Ionischen Meer, besticht durch türkisblaues Wasser, hohe Klippen und traumhafte Strände. Ein bekanntes Highlight ist die Shipwreck-Bucht (Navagio Beach) – ein spektakulärer Ort mit weißem Sand, kristallklarem Wasser und dem berühmten Schiffswrack inmitten der Bucht.',
+    imagePath: 'assets/images/zakynthos.jpeg',
+  ),
+  GalleryItem(
+    imageTitle: 'Zypern Nikosia',
+    imageDate: '17.09.2022',
+    imageDescription:
+        'Zypern vereint mediterranes Flair mit reicher Geschichte und sonnigem Wetter. Die Hauptstadt Nikosia ist die letzte geteilte Stadt Europas und beeindruckt mit historischem Charme, lebendigen Märkten und kultureller Vielfalt – ein spannender Mix aus Tradition und Moderne.',
+    imagePath: 'assets/images/zypern.jpeg',
+  ),
 ];
 
 class GalleryItem {
